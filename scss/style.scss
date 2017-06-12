@@ -1,0 +1,77 @@
+
+// The canvas
+#bacterium {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	background: #ffffff;
+}
+
+// The footer
+@import url(http://fonts.googleapis.com/css?family=Karla:700,400);
+body {
+	font-family: Karla, sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: inherit;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 0 20px;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+	z-index: 1;
+
+	.info {
+		position: relative;
+		visibility: hidden;
+    pointer-events: none;
+		z-index: 1;
+	}
+
+	.toggle {
+		opacity: 1;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 100%;
+		text-align: center;
+		cursor: pointer;
+		z-index: 2;
+		span {
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			border-radius: 50%;
+			background: black;
+			color: white;
+		}
+	}
+	
+	&:hover {
+    .info {
+      visibility: visible;
+      pointer-events: all;
+    }
+    .toggle {
+      display: none;
+    }
+  }
+
+}
